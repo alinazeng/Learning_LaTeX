@@ -1,15 +1,68 @@
 \documentclass[a4paper, 12pt]{article}
+\usepackage{amsmath}
 % define the title
 \author{Alina Zeng}
-\title{MInimalism}
+\title{Don't Know What To Name This}
+
+% update May-28, 2021
+% taking tutorial here at https://latex-tutorial.com/tutorials/first-document/
+
+
+
+
 \begin{document}
-% generates the title
+% generates the title on a new page
+\pagenumbering{gobble}   % to hide the page number on the cover page
 \maketitle
+\newpage
+\pagenumbering{arabic}   % to unhide the page number
+
+
+% the section commands are numbered and will appear in the table of contents of your document. Paragraphs aren’t numbered and won’t show in the table of contents
 % insert the table of contents
 \tableofcontents
-\section{Some Interesting Words}
-Well, here it begins my lovely article.
-Hello, this is Alina learning LaTeX for the first time on May 22, 2021. I am not sure if I am doing it right but anyhoo. 
-\section{Have a great day!}
+\newpage  % making a new page for contents
+
+\section{For Forever}
+Dear Evan Hansen, today is going to be a great day and here is why. \newline
+You can \textsl{lean} on me!
+You can \textbf{count} on me~ \newline
+
+
+\subsection{All we see is light, for forever}
+Excited for Hamilton Tour in 2022. \newline
+
+\subsubsection {{\small Small} is {\Large big}}
+What's cookin'
+
+\paragraph {What to do when you feel hungry}
+
+\subparagraph {Time to eat out!} Have not had a chance in so long.
+
+\section{Math Equations}
+\begin{equation*}
+  f(x) = x^2
+\end{equation*}
+% The automatic numbering is a useful feature, but sometimes it’s necessary to remove them for auxiliary calculations. LaTeX doesn’t allow this by default, now we want to include a package that does
+
+
+\begin{equation*}
+  1 + 2 = 3 
+\end{equation*}
+
+\begin{equation*}
+  1 = 3 - 2
+\end{equation*}
+
+\paragraph{trying out alignment}
+\begin{align*}
+    f(x) &= x^2\\
+    1 + 2 &= 3\\
+  1 &= 3 - 2
+\end{align*}
+\subparagraph{LOL I don't quite like how this looks}
+
 \ldots{} and here it ends.
+
+\paragraph{will continue tmrw} at https://latex-tutorial.com/tutorials/amsmath/
 \end{document}
