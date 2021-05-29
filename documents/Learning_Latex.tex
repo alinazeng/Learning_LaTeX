@@ -1,9 +1,13 @@
 \documentclass[a4paper, 12pt]{article}
-\usepackage{amsmath}
-\usepackage{amsmath}
+\usepackage{amsmath} % for math functions
+\usepackage{graphicx} % for linking images
+\usepackage{float} % to force an inserted figure to stay in place
+\usepackage{subcaption} % to display multiple figures side by side
+
+
 % define the title
 \author{Alina Zeng}
-\title{Don't Know What To Name This}
+\title{\textbf{Is it lunchtime yet}}
 
 % update May-28, 2021
 % taking tutorial here at https://latex-tutorial.com/tutorials/first-document/
@@ -56,7 +60,7 @@ What's cookin'
 \end{equation*}
 
 \subsection{Alignment}
-\paragraph{trying out alignment} ``=''
+\paragraph{Trying out alignment} ``=''
 \begin{align*}
     f(x) &= x^2\\
     1 + 2 &= 3\\
@@ -64,7 +68,7 @@ What's cookin'
 \end{align*}
 \subparagraph{LOL I don't quite like how this looks.}
 
-\paragraph{trying out alignment} ``2''
+\paragraph{Trying out alignment} ``2''
 \begin{align*}
     1 + &2 = 3\\
   1 = 3 - &2
@@ -73,19 +77,19 @@ What's cookin'
 
 
 \subsection{Would you like some more}
-\paragraph{some simple LaTeX math functions}
+\paragraph{Some simple LaTeX math functions}
 \begin{align*}
   f(x) &= x^2\\
   g(x) &= \frac{1}{x}\\
   y(x) &= \left(\frac{1}{\sqrt{x}}\right)\\
   F(x) &= \int^a_b \frac{1}{3}x^3
 \end{align*}
-\subparagraph{more sophisticated functions can happen by combining various commands}
+\subparagraph{More sophisticated functions can happen by combining various commands}
 
 
 
-\subsection{trying out matrices}
-\subparagraph{matrices inside parentheses}
+\subsection{Trying out matrices}
+\subparagraph{Matrices inside parentheses}
 \begin{equation*}
 A = 
 \begin{pmatrix}
@@ -95,7 +99,7 @@ A =
 \end{pmatrix}
 \end{equation*}
 
-\subparagraph{matrices without brackets}
+\subparagraph{Matrices without brackets}
 \begin{equation*}
    \begin{matrix} 
    a_{11} & a_{12} & a_{13}  \\
@@ -104,7 +108,7 @@ A =
    \end{matrix} 
 \end{equation*}
 
-\subparagraph{matrices have to happen within the equation environment}
+\subparagraph{Matrices have to happen within the equation environment}
 \begin{equation*}
 \begin{matrix}
 1 & 0\\
@@ -112,7 +116,7 @@ A =
 \end{matrix}
 \end{equation*}
 
-\subparagraph{some more varieties}
+\subparagraph{Some more varieties}
 \begin{equation*}
    \begin{vmatrix} 
    a_{11} & a_{12} & a_{13}  \\
@@ -153,6 +157,58 @@ c & d
 \begin{center}
 \textbf{I love small matrices such as$\big(\begin{smallmatrix} a & b\\ c & d \end{smallmatrix}\big)$}
 \end{center}
+
+\section{Captioned Images in LateX}
+\subsection{Temperature of Boston}
+\begin{figure}[H]  % The float package (\usepackage{float}) allows to set the option to [H], which is even stricter than [h!].
+  \includegraphics[width=\linewidth]{Figures/Temp_complete_2015.png}
+  \caption{Temperature plot made using ggplot2, May 28 2021}
+  \label{fig:Temp_complete_20151}
+\end{figure}
+Figure \ref{fig:Temp_complete_20151} shows temperature plot.
+
+\paragraph{} At some point, you will notice that the figure doesn’t necessarily show up in the exact place as you put your code in the .tex file. If your document contains a lot of text, it’s possible that LaTeX will put the picture on the next page, or any other page where it finds sufficient space. To prevent this behavior, it’s necessary to set the \textbf{float} value for the figure environment.
+
+\subsection{Adding multiple subfigure environments within a figure environment.}
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.45\linewidth}
+    \includegraphics[width=\linewidth]{Figures/improved_resolution_thanlyou_cairo.png}
+    \caption{Mean plot.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\linewidth}
+    \includegraphics[width=\linewidth]{Figures/improved_resolution_thanlyou_cairo.png}
+    \caption{More mean plot.}
+  \end{subfigure}
+  \caption{The same mean plot. Two times.}
+  \label{fig:meanplot}
+\end{figure}
+\newpage
+
+\newpage
+\subsubsection{Too much coffee?}
+\begin{figure}
+  \centering
+  \begin{subfigure}[b]{0.3\linewidth}
+    \includegraphics[width=\linewidth]{Figures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg}
+     \caption{Coffee.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.3\linewidth}
+    \includegraphics[width=\linewidth]{Figures/devin-avery-5iRgh_G0eRY-unsplash.jpg}
+    \caption{More coffee.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.3\linewidth}
+    \includegraphics[width=\linewidth]{Figures/clay-banks-_wkd7XBRfU4-unsplash.jpg}
+    \caption{Tasty coffee.}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.8\linewidth}
+    \includegraphics[width=\linewidth]{Figures/nathan-dumlao-6VhPY27jdps-unsplash.jpg}
+    \caption{Too much coffee.}
+  \end{subfigure}
+  \caption{Lots of coffee and I don't even like coffee. \textsl{Images sourced from Unsplash}.}
+  \label{fig:coffee3}
+\end{figure}
+\newpage
 
 
 \section{Ending}
