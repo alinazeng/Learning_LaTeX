@@ -1,5 +1,6 @@
 \documentclass[a4paper, 12pt]{article}
 \usepackage{amsmath}
+\usepackage{amsmath}
 % define the title
 \author{Alina Zeng}
 \title{Don't Know What To Name This}
@@ -54,14 +55,103 @@ What's cookin'
   1 = 3 - 2
 \end{equation*}
 
-\paragraph{trying out alignment}
+\paragraph{trying out alignment} ``=''
 \begin{align*}
     f(x) &= x^2\\
     1 + 2 &= 3\\
   1 &= 3 - 2
 \end{align*}
-\subparagraph{LOL I don't quite like how this looks}
+\subparagraph{LOL I don't quite like how this looks.}
 
+\paragraph{trying out alignment} ``2''
+\begin{align*}
+    1 + &2 = 3\\
+  1 = 3 - &2
+\end{align*}
+\subparagraph{This is a bit funky.}
+
+\paragraph{some simple LaTeX math functions}
+\begin{align*}
+  f(x) &= x^2\\
+  g(x) &= \frac{1}{x}\\
+  y(x) &= \left(\frac{1}{\sqrt{x}}\right)\\
+  F(x) &= \int^a_b \frac{1}{3}x^3
+\end{align*}
+\subparagraph{more sophisticated functions can happen by combining various commands}
+
+
+\paragraph{trying out matrices}
+\subparagraph{matrices inside parentheses}
+\begin{equation*}
+A = 
+\begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{pmatrix}
+\end{equation*}
+
+\subparagraph{matrices without brackets}
+\begin{equation*}
+   \begin{matrix} 
+   a_{11} & a_{12} & a_{13}  \\
+   a_{21} & a_{22} & a_{23}  \\
+   a_{31} & a_{32} & a_{33}  \\
+   \end{matrix} 
+\end{equation*}
+
+\subparagraph{matrices have to happen within the equation environment}
+\begin{equation*}
+\begin{matrix}
+1 & 0\\
+0 & 1
+\end{matrix}
+\end{equation*}
+
+\subparagraph{some more varieties}
+\begin{equation*}
+   \begin{vmatrix} 
+   a_{11} & a_{12} & a_{13}  \\
+   a_{21} & a_{22} & a_{23}  \\
+   a_{31} & a_{32} & a_{33}  \\
+   \end{vmatrix} 
+\end{equation*}
+
+\subparagraph{Here are examples with matrix 2x2 with pmatrix, bmatrix, vmatrix, Vmatrix environments:}
+\begin{equation*}
+\begin{matrix} 
+a & b \\
+c & d 
+\end{matrix}
+\quad  % side by side
+\begin{pmatrix} 
+a & b \\
+c & d 
+\end{pmatrix}
+\quad
+\begin{bmatrix} 
+a & b \\
+c & d 
+\end{bmatrix}
+\quad
+\begin{vmatrix} 
+a & b \\
+c & d 
+\end{vmatrix}
+\quad
+\begin{Vmatrix} 
+a & b \\
+c & d 
+\end{Vmatrix}
+\end{equation*}
+
+\subparagraph{Small matrix environment} For more, refer to \textsl{https://www.math-linux.com/latex-26/faq/latex-faq/article/how-to-write-matrices-in-latex-matrix-pmatrix-bmatrix-vmatrix-vmatrix} \\
+\begin{center}
+\textbf{I love small matrices such as$\big(\begin{smallmatrix} a & b\\ c & d \end{smallmatrix}\big)$}
+\end{center}
+
+
+\section{Ending}
 \ldots{} and here it ends.
 
 \paragraph{will continue tmrw} at https://latex-tutorial.com/tutorials/amsmath/
