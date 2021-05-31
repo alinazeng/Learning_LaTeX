@@ -3,6 +3,13 @@
 \usepackage{graphicx} % for linking images
 \usepackage{float} % to force an inserted figure to stay in place
 \usepackage{subcaption} % to display multiple figures side by side
+\usepackage{setspace} % /doublespacing | /singlespacing
+
+\setcounter{tocdepth}{5} % Show sections
+%\setcounter{tocdepth}{2} % + subsections
+%\setcounter{tocdepth}{3} % + subsubsections
+%\setcounter{tocdepth}{4} % + paragraphs
+%\setcounter{tocdepth}{5} % + subparagraphs
 
 
 % define the title
@@ -210,9 +217,27 @@ Figure \ref{fig:Temp_complete_20151} shows temperature plot.
 \end{figure}
 \newpage
 
+\section {Adding table of contents and list of figures}
+
+\paragraph{}  Sometimes it makes sense to only show a subset of the headings for all sections or for a particular section. For this reason you can set a the tocdepth by using the command etcounter{tocdepth}{X}, where X is the desired depth. A value of 0 means that your table of contents will show nothing at all and 5 means, that even subparagraphs will be shown. The value has to be set in the preamble of your document and automatically applies to the whole document:
+
+
+\section{Footnotes}
+Yayyy txt came back today \footnote{\label{myfootnote}Hello footnote}.
+
 
 \section{Ending}
 \ldots{} and here it ends.
 
-\paragraph{will continue tmrw} at https://latex-tutorial.com/tutorials/amsmath/
+\paragraph{} 
+Will continue tmrwat https://latex-tutorial.com/tutorials/amsmath/
+
+
+
+I'm referring to yayy \ref{myfootnote}.
+
+\begin{appendix}
+  \listoffigures
+
+\end{appendix}
 \end{document}
